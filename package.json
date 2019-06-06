@@ -1,0 +1,15 @@
+{
+  "name": "hgscn2",
+  "description": "Hg(SCN)_2 distributed website generator",
+  "version": "0.0.1",
+  "dependencies": {
+    "archiver": "^1.1.0",
+    "argparse": "^1.0.7",
+    "browserify": "*",
+    "create-torrent": "^3.25.1",
+    "jszip": "*",
+    "parse-torrent": "^5.8.1",
+    "string-template": "^1.0.0",
+    "webtorrent-hybrid": "^1.0.5"
+  }
+}
