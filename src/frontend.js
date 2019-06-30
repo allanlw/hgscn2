@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var argparse = require("argparse");
 var browserify = require("browserify");
 var fs = require('fs');
@@ -14,7 +15,7 @@ var parser = new argparse.ArgumentParser({
 });
 parser.addArgument("-d", {
     action: "storeTrue",
-    help: "Serve locally"
+    help: "Serve locally on 8080"
 });
 parser.addArgument("indir", {
     metavar: "INDIR",
@@ -135,7 +136,7 @@ function serveDaemon(stage3_torrent, stage2_js, outdir) {
         response.setHeader("Access-Control-Allow-Origin", "*");
         fs.createReadStream(stage2_js).pipe(response);
     });
-    server.listen(8888, function() {
+    server.listen(8080, function() {
         console.log("web server started");
     });
 
@@ -160,7 +161,7 @@ var stage2_uris = args.stage2_uris.slice();
 var indir = args.indir;
 
 if (args.d) {
-    stage2_uris.unshift("http://localhost:8888/stage2.js");
+    stage2_uris.unshift("http://localhost:8080/stage2.js");
 }
 
 if (stage2_uris.length === 0) {

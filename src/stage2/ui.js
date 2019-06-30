@@ -69,9 +69,6 @@ function renderStatus(status) {
 function checkNode(node) {
     var proms = [];
     switch (node.nodeName) {
-        case "A":
-            // Need to redirect these
-            break;
         case "LINK":
             if (node.getAttribute("rel") == "stylesheet") {
                 proms.push(fixNode(node, "href"));
