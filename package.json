@@ -1,15 +1,17 @@
 {
   "name": "hgscn2",
   "description": "Hg(SCN)_2 distributed website generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "license": "MIT",
+  "repository": "https://github.com/allanlw/hgscn2",
   "dependencies": {
-    "archiver": "^1.1.0",
-    "argparse": "^1.0.7",
-    "browserify": "*",
-    "create-torrent": "^3.25.1",
-    "jszip": "*",
-    "parse-torrent": "^5.8.1",
+    "archiver": "^3.0.0",
+    "argparse": "^1.0.10",
+    "browserify": "^16.2.3",
+    "create-torrent": "^4.0.0",
+    "jszip": "^3.2.1",
+    "parse-torrent": "^6.1.2",
     "string-template": "^1.0.0",
-    "webtorrent-hybrid": "^1.0.5"
+    "webtorrent-hybrid": "^3.0.1"
   }
 }

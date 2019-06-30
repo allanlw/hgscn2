@@ -168,6 +168,10 @@ if (stage2_uris.length === 0) {
     process.exit(1);
 }
 
+try {
+  fs.mkdirSync(args.outdir);
+} catch(e) {}
+
 allSteps(indir, stage3_zip, stage3_torrent, stage2_js, stage1_txt, stage2_uris).then(function(datauri) {
     console.log("done building");
     if (args.d) {
